@@ -2,6 +2,9 @@ import {defineConfig} from 'vitepress'
 import {set_sidebar} from './utils'
 
 export default defineConfig({
+  build: {
+    target: 'es2020', // 或其他支持的值
+  },
   srcDir: 'src',
   title: "Docs",
   description: "good good study,day day up",
@@ -45,7 +48,7 @@ export default defineConfig({
 
     outline: {
       label: '页面导航',
-      level: [2,3]
+      level: [2, 3]
     },
 
     logo: '/logo.png',
@@ -55,7 +58,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://gitee.com/jinyue12138/study-docs/tree/master/src/:path',
+      pattern: 'https://github.com/JinYue127/study-docs/tree/master/src/:path',
       text: '在 Github 上编辑此页面'
     },
     // https://vitepress.dev/reference/default-theme-config
@@ -93,8 +96,8 @@ export default defineConfig({
 
     socialLinks: [
       {
-        icon:'github',
-        link: 'https://gitee.com/jinyue12138/study-docs'
+        icon: 'github',
+        link: 'https://github.com/JinYue127/study-docs'
       }
     ]
   }

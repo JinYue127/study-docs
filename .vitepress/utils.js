@@ -8,13 +8,13 @@ const WHITE_LIST = ['index.md', '.vitepress', 'node_modules', '.idea', 'assets']
 
 
 // 判断是否是文件夹
-const isDirectory = (path:string) => fs.lstatSync(path).isDirectory()
+const isDirectory = (path) => fs.lstatSync(path).isDirectory()
 
 // 取差值
-const intersections = (arr1:string[], arr2:string[]) => Array.from(new Set(arr1.filter((item) => !new Set(arr2).has(item))))
+const intersections = (arr1, arr2) => Array.from(new Set(arr1.filter((item) => !new Set(arr2).has(item))))
 
 // 把方法导出直接使用
-function getList(params:string[], path1:string, pathname:string) {
+function getList(params, path1, pathname) {
   // 存放结果
   const res = []
   // 开始遍历params
@@ -46,7 +46,7 @@ function getList(params:string[], path1:string, pathname:string) {
     }
   }
   // 定义一个函数用于从文本中提取数字序号
-  const extractNumber = (text: string) => {
+  const extractNumber = (text) => {
     const match = text.match(/^(\d+)/); // 匹配开头的连续数字
     return match ? parseInt(match[1], 10) : -1; // 返回匹配到的数字或-1（用于非数字开头的文本）
   };
@@ -68,7 +68,7 @@ function getList(params:string[], path1:string, pathname:string) {
   });
 }
 
-export const set_sidebar = (pathname:string) => {
+export const set_sidebar = (pathname) => {
   // 获取pathname的路径
   const dirPath = path.join(DIR_PATH, `src/${pathname}`)
   // 读取pathname下的所有文件或者文件夹
