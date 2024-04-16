@@ -1,0 +1,11 @@
+node_modules
+.coverage/
+coverage
+archive.zip
+archive.tar.gz
+.chiller/
+.next/
+.vscode
+.idea
+/html/
+.vitepress/cache
