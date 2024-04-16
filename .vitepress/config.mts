@@ -56,7 +56,7 @@ export default defineConfig({
 
     editLink: {
       pattern: 'https://gitee.com/jinyue12138/study-docs/tree/master/src/:path',
-      text: '在 Gitee 上编辑此页面'
+      text: '在 Github 上编辑此页面'
     },
     // https://vitepress.dev/reference/default-theme-config
 
@@ -74,85 +74,6 @@ export default defineConfig({
           {text: 'Nest', link: '/后端/nest/介绍'},
         ]
       },
-      // {
-      //   text: '组件库', items: [
-      //     {text: 'Fusion', link: 'https://fusion.design/pc/?themeid=2'},
-      //     {text: 'Shadcn', link: 'https://ui.shadcn.com/'},
-      //     {text: 'ant-design-react', link: 'https://ant-design.antgroup.com/components/overview-cn'},
-      //     {text: 'Element Plus', link: 'https://element-plus.gitee.io/zh-CN/'},
-      //     {text: 'Vant', link: 'https://vant-ui.github.io/vant/#/zh-CN/'},
-      //     {text: 'Tailwindcss', link: 'https://www.tailwindcss.cn/'},
-      //   ]
-      // },
-      // {
-      //   text: '官方文档', items: [
-      //     {text: 'Vitest', link: 'https://cn.vitest.dev/'},
-      //     {text: 'Vitepress', link: 'https://vitepress.dev/zh/'},
-      //     {text: 'Vite', link: 'https://cn.vitejs.dev/'},
-      //     {text: '飞冰 (ICE)', link: 'https://v3.ice.work/'},
-      //     {text: 'MDN', link: 'https://developer.mozilla.org/zh-CN/docs/Learn'},
-      //     {text: 'Clerk', link: 'https://dashboard.clerk.com/'},
-      //     {text: 'Nuxt', link: 'https://www.nuxt.com.cn/'},
-      //     {text: 'Astro', link: 'https://docs.astro.build/zh-cn/getting-started/'},
-      //     {text: 'Mock', link: 'https://github.com/nuysoft/Mock/wiki/Getting-Started'},
-      //     {text: 'Dayjs', link: 'https://dayjs.fenxianglu.cn/'},
-      //     {text: 'Echarts', link: 'https://echarts.apache.org/zh/index.html'},
-      //     {text: 'Pinia', link: 'https://pinia.web3doc.top/'},
-      //     {text: 'Typeorm', link: 'https://typeorm.biunav.com/'},
-      //     {text: '微信公众平台', link: 'https://mp.weixin.qq.com/'},
-      //     {text: 'Vue Router', link: 'https://router.vuejs.org/zh/introduction.html'},
-      //     {text: 'w3school', link: 'https://www.w3school.com.cn/index.html'},
-      //   ]
-      // },
-      // {
-      //   text: '面试', items: []
-      // },
-      // {
-      //   text: '问题', items: []
-      // },
-      // {
-      //   text: 'Game', items: [
-      //     {text: 'gamer520', link: 'https://www.gamer520.com/'},
-      //     {text: 'xd-game', link: 'https://www.xdgame.com/'},
-      //     {text: 'truck-game', link: 'https://truckgame.cn/'},
-      //     {text: 'ali213', link: 'https://down.ali213.net/'},
-      //   ]
-      // },
-      // {
-      //   text: '工具', items: [
-      //     {text: 'GitHub', link: 'https://github.com/'},
-      //     {text: 'Gitee', link: 'https://gitee.com/'},
-      //     {text: 'Gmail', link: 'https://gmail.com/'},
-      //     {text: 'Wrmhole', link: 'https://wormhole.app/'},
-      //     {text: '阿里云', link: 'https://home.console.aliyun.com/home/dashboard/ProductAndService'},
-      //     {text: 'ProcessOn', link: 'https://www.processon.com/'},
-      //     {text: 'ngrok', link: 'https://dashboard.ngrok.com/cloud-edge/domains'},
-      //     {text: '掘金', link: 'https://juejin.cn/'},
-      //     {text: 'ShowDoc', link: 'https://www.showdoc.com.cn/'},
-      //     {text: '力扣', link: 'https://leetcode.cn/'},
-      //     {text: '乔布简历', link: 'https://cv.qiaobutang.com/'},
-      //     {text: 'boardmix', link: 'https://boardmix.cn/'},
-      //     {text: '测网速', link: 'https://www.speedtest.cn/'},
-      //     {text: 'idea激活码', link: 'https://www.jiweichengzhu.com/ide/code'},
-      //     {text: '网页图标在线抓取', link: 'https://gonglue.qinggl.com/app/img/icon.jsp'},
-      //     {text: 'JSON工具', link: 'https://www.bejson.com/'},
-      //     {text: 'JSON转TypeScript', link: 'https://tooltt.com/json2typescript/'},
-      //     {text: 'HTML/URL To Markdown', link: 'https://devtool.tech/html-md'},
-      //   ]
-      // },
-      // {
-      //   text: '资源', items: [
-      //     {text: '阿里小站', link: 'https://pan666.net/'},
-      //     {text: '佛系软件', link: 'https://foxirj.com/'},
-      //     {text: '魔戒', link: 'https://mojie.app/dashboard'},
-      //     {text: 'pexels', link: 'https://www.pexels.com/zh-cn/'},
-      //     {text: 'pixabay', link: 'https://pixabay.com/'},
-      //     {text: '潮点', link: 'https://shipin520.com/sousuo/?word=&type=all&kid=&order=&data=&page=1&from_code=12&sk=5042065'},
-      //     {text: 'IconFont', link: 'https://www.iconfont.cn/'},
-      //     {text: 'NBA', link: 'https://www.aliyundrive.com/s/hVAgTmqUELD'},
-      //     {text: '后盾人', link: 'https://doc.houdunren.com/'},
-      //   ]
-      // },
     ],
 
     sidebar: {
