@@ -106,10 +106,7 @@ export default withMermaid(
         },
         {
           text: '其他', items: [
-            {text: 'tabs', link: '/markdown扩展/选项卡'},
-            {text: 'mermaid', link: '/markdown扩展/mermaid'},
-            {text: 'todo', link: '/markdown扩展/todo'},
-            {text: '时间线', link: '/markdown扩展/时间线'},
+            {text: 'markdown扩展', link: '/other/markdown扩展/index'},
           ]
         }
       ],

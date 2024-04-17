@@ -1,6 +1,16 @@
-# timeline
+## 时间线
 
-## 示例
+::: timeline 2024-04-17
+
+- **do some thing1**
+- do some thing2
+  :::
+
+::: timeline 2024-05-01
+
+- do some thing3
+- do some thing4
+  :::
 
 ```markdown
 ::: timeline 2024-04-17
@@ -10,18 +20,9 @@
   :::
 
 ::: timeline 2024-05-01
-do some thing3
-do some thing4
-:::
+
+- do some thing3
+- do some thing4
+  :::
 ```
 
-::: timeline 2024-04-17
-
-- **do some thing1**
-- do some thing2
-  :::
-
-::: timeline 2024-05-01
-do some thing3
-do some thing4
-:::

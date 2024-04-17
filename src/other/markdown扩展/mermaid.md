@@ -1,10 +1,10 @@
-# Mermaid
+## Mermaid
 
 它是一个基于 JavaScript 的图表绘制工具，可渲染 Markdown 启发的文本定义以动态创建和修改图表。
 
 > 如果你熟悉 `Markdown`，那么学习 [Mermaid](https://mermaid.nodejs.cn/)  的语法 应该没有问题。
 
-## 流程图
+### 流程图
 
 ```mermaid
 graph TD
@@ -16,7 +16,7 @@ graph TD
 
 ```
 
-## 时序图
+### 时序图
 
 ```mermaid
 sequenceDiagram
@@ -33,7 +33,7 @@ sequenceDiagram
 
 ```
 
-## 甘特图
+### 甘特图
 
 ```mermaid
 gantt
@@ -49,7 +49,7 @@ gantt
 
 ```
 
-## 类图
+### 类图
 
 ```mermaid
 classDiagram
@@ -69,7 +69,7 @@ classDiagram
 
 ```
 
-## Git 图
+### Git 图
 
 ```mermaid
     gitGraph
@@ -85,7 +85,7 @@ classDiagram
 
 ```
 
-## 实体关系图
+### 实体关系图
 
 ```mermaid
 erDiagram
@@ -96,7 +96,7 @@ erDiagram
 
 ```
 
-## 用户旅程图
+### 用户旅程图
 
 ```mermaid
 journey
@@ -111,7 +111,7 @@ journey
 
 ```
 
-## 象限图
+### 象限图
 
 ```mermaid
 quadrantChart
@@ -131,7 +131,7 @@ quadrantChart
 
 ```
 
-## XY 图表
+### XY 图表
 
 ```mermaid
 xychart-beta
