@@ -8,6 +8,7 @@ import "vitepress-markdown-timeline/dist/theme/index.css";
 import mediumZoom from "medium-zoom";
 import './styles/index.scss'
 import googleAnalytics from 'vitepress-plugin-google-analytics'
+import {enhanceAppWithTabs} from 'vitepress-plugin-tabs/client'
 
 export default {
   // Layout,
@@ -53,6 +54,7 @@ export default {
     );
   },
   async enhanceApp({app, router, siteData}) {
+    enhanceAppWithTabs(app)
     googleAnalytics({
       id: 'G-JKGZZT00ND', //跟踪ID，在analytics.google.com注册即可
     })
