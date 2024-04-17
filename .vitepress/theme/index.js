@@ -1,6 +1,5 @@
 // import Layout from './Layout.vue'
 import DefaultTheme from 'vitepress/theme'
-import '//at.alicdn.com/t/c/font_4510196_jy6z3d81r7l.js'
 import {module} from "./constants";
 import {nextTick, onMounted, toRefs, watch} from 'vue';
 import giscusTalk from "vitepress-plugin-comment-with-giscus";
@@ -8,6 +7,7 @@ import {useData, useRoute} from "vitepress";
 import "vitepress-markdown-timeline/dist/theme/index.css";
 import mediumZoom from "medium-zoom";
 import './styles/index.scss'
+
 export default {
   // Layout,
   extends: DefaultTheme,
@@ -19,6 +19,8 @@ export default {
       mediumZoom('.main img', {background: 'var(--vp-c-bg)'}); // 不显式添加{data-zoomable}的情况下为所有图像启用此功能
     };
     onMounted(() => {
+      import ('./assets/iconFont')
+
       initZoom();
     });
     watch(
