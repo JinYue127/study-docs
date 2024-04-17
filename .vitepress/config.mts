@@ -1,9 +1,9 @@
 import {defineConfig} from "vitepress";
-import {set_sidebar} from './utils'
 import timeline from "vitepress-markdown-timeline";
 import taskLists from 'markdown-it-task-checkbox'
 import {withMermaid} from "vitepress-plugin-mermaid";
 import {tabsMarkdownPlugin} from 'vitepress-plugin-tabs'
+import {set_sidebar} from './autoSidebar'
 
 export default withMermaid(
   defineConfig({
