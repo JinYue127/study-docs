@@ -4,9 +4,9 @@
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
+import Weather from "./components/Weather.vue";
 
 const { isDark } = useData()
-
 const enableTransitions = () =>
   'startViewTransition' in document &&
   window.matchMedia('(prefers-reduced-motion: no-preference)').matches
@@ -42,7 +42,11 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 </script>
 
 <template>
-  <DefaultTheme.Layout />
+  <DefaultTheme.Layout>
+    <template #aside-top>
+      <Weather />
+    </template>
+  </DefaultTheme.Layout>
 </template>
 
 <style>

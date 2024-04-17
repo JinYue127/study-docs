@@ -7,4 +7,3 @@ hero:
   tagline: good good study,day day up
 
 ---
-

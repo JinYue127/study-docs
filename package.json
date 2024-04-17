@@ -13,15 +13,22 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "mermaid": "^10.9.0",
     "sass": "^1.75.0",
-    "vitepress": "^1.0.2"
+    "vitepress": "^1.0.2",
+    "vitepress-plugin-mermaid": "^2.0.16",
+    "vitepress-plugin-tabs": "^0.5.0"
   },
   "volta": {
     "node": "18.20.1"
   },
   "dependencies": {
+    "markdown-it-task-checkbox": "^1.0.6",
+    "medium-zoom": "^1.1.0",
     "oh-my-live2d": "^0.16.1",
+    "vitepress-markdown-timeline": "^1.2.1",
     "vitepress-plugin-comment-with-giscus": "^1.1.12",
+    "vitepress-plugin-google-analytics": "^1.0.2",
     "vue": "^3.4.22"
   }
 }
