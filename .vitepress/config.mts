@@ -1,15 +1,28 @@
 import {defineConfig} from 'vitepress'
 import {set_sidebar} from './utils'
+import timeline from "vitepress-markdown-timeline";
+import taskLists from 'markdown-it-task-checkbox'
 
 export default defineConfig({
-  build: {
-    target: 'es2020', // 或其他支持的值
+  base :'/study-docs/',
+  markdown: {
+    //时间线
+    config: (md) => {
+      md.use(timeline).use(taskLists, {
+        disabled: false,
+        divWrap: false,
+        divClass: 'checkbox',
+        idPrefix: 'cbx_',
+        ulClass: 'task-list',
+        liClass: 'task-list-item',
+      })
+    },
   },
   srcDir: 'src',
   title: "Docs",
   description: "good good study,day day up",
   head: [
-    ['link', {rel: 'icon', href: '/logo.png'}],
+    ['link', {rel: 'icon', href: '/study-docs/logo.png'}],
     [
       "meta",
       {
