@@ -1,7 +1,7 @@
-// import Layout from './Layout.vue'
+import Layout from './Layout.vue'
 import DefaultTheme from 'vitepress/theme'
 import {module} from "./constants";
-import {h, nextTick, onMounted, toRefs, watch} from 'vue';
+import {nextTick, onMounted, toRefs, watch} from 'vue';
 import giscusTalk from "vitepress-plugin-comment-with-giscus";
 import {useData, useRoute} from "vitepress";
 import "vitepress-markdown-timeline/dist/theme/index.css";
@@ -9,18 +9,9 @@ import mediumZoom from "medium-zoom";
 import './styles/index.scss'
 import googleAnalytics from 'vitepress-plugin-google-analytics'
 import {enhanceAppWithTabs} from 'vitepress-plugin-tabs/client'
-import Weather from "./components/Weather.vue";
 
 export default {
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      'aside-top': () => h(Weather),
-      // 'aside-outline-after': () => h(Donate),
-      // 'doc-top': () => h(ImagePreviewLayout),
-      // 'doc-before': () => h(Music),
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    });
-  },
+  Layout,
   extends: DefaultTheme,
   setup() {
     const {frontmatter} = toRefs(useData());
