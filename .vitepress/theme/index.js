@@ -7,6 +7,7 @@ import {useData, useRoute} from "vitepress";
 import "vitepress-markdown-timeline/dist/theme/index.css";
 import mediumZoom from "medium-zoom";
 import './styles/index.scss'
+import googleAnalytics from 'vitepress-plugin-google-analytics'
 
 export default {
   // Layout,
@@ -52,6 +53,9 @@ export default {
     );
   },
   async enhanceApp({app, router, siteData}) {
+    googleAnalytics({
+      id: 'G-JKGZZT00ND', //跟踪ID，在analytics.google.com注册即可
+    })
     if (!import.meta.env.SSR) {
       const {loadOml2d} = await import('oh-my-live2d');
       loadOml2d({
