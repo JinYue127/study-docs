@@ -15,7 +15,7 @@
 </template>
 <script setup lang="ts">
 import {onMounted, ref} from 'vue';
-import WeatherJson from './ weather.json';
+import WeatherJson from '../constants/weather.json';
 
 interface IWeather {
   icon?: string;
