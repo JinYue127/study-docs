@@ -4,6 +4,7 @@ import taskLists from 'markdown-it-task-checkbox'
 import {withMermaid} from "vitepress-plugin-mermaid";
 import {tabsMarkdownPlugin} from 'vitepress-plugin-tabs'
 import {set_sidebar} from './autoSidebar'
+import {blogTheme} from "./blog-theme";
 
 export default withMermaid(
   defineConfig({
@@ -48,6 +49,7 @@ export default withMermaid(
     cleanUrls: true,
 
     themeConfig: {
+      blog: blogTheme,
       footer: {
         message: '学习文档'
         // copyright: 'Copyright © 2019-present Evan You'
