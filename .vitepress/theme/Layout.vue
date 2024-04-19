@@ -4,6 +4,7 @@
 import DefaultTheme from 'vitepress/theme'
 import Weather from "./components/Weather.vue";
 import BlogHomeHeaderAvatar from "./components/BlogHomeHeaderAvatar.vue";
+import BlogBackToTopOrComment from "./components/BlogBackToTopOrComment.vue";
 </script>
 
 <template>
@@ -15,8 +16,14 @@ import BlogHomeHeaderAvatar from "./components/BlogHomeHeaderAvatar.vue";
     <template #home-hero-before>
       <slot name="home-hero-before"/>
       <div class="home">
-        <BlogHomeHeaderAvatar />
+        <BlogHomeHeaderAvatar/>
       </div>
+    </template>
+    <template #doc-after>
+      <slot name="doc-after"/>
+      <ClientOnly>
+        <BlogBackToTopOrComment/>
+      </ClientOnly>
     </template>
   </DefaultTheme.Layout>
 </template>

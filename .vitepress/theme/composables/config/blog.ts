@@ -25,9 +25,16 @@ export function withConfigProvider(App: Component) {
     name: 'ConfigProvider',
     setup(_, { slots }) {
       const { theme } = useData()
+      console.log(theme,'---------theme')
       const config = computed(() => resolveConfig(theme.value))
       provide(configSymbol, config as any)
       return () => h(App, null, slots)
     }
   })
+}
+export function useBackToTopConfig() {
+  return useBlogConfig().backToTop
+}
+export function useBackToComment() {
+  return useBlogConfig().backToComment
 }

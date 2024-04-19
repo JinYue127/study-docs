@@ -70,6 +70,7 @@ html.dark {
     }
   }
 }
+
 @media screen and (max-width: 959px) {
   .VPNav {
     background-color: var(--nav-bgc);
@@ -111,9 +112,10 @@ html.dark {
     padding-right: 10px !important;
   }
 }
+
 .VPFooter {
   border-top: 1px solid var(--vp-c-gutter) !important;
-  padding: 20px 12px!important;
+  padding: 20px 12px !important;
   background-color: var(--vp-c-bg) !important;
 }
 

@@ -48,6 +48,7 @@ export namespace Theme {
      */
     docMetaInsertPosition?: 'before' | 'after'
   }
+
   export interface PageData {
     route: string
     meta: PageMeta
@@ -76,6 +77,7 @@ export namespace Theme {
     readingTimePosition?: 'inline' | 'newLine' | 'top'
     hiddenCover?: boolean
   }
+
   export type ThemeColor =
     | 'vp-default'
     | 'vp-green'
@@ -85,8 +87,8 @@ export namespace Theme {
     | 'el-yellow'
     | 'el-green'
     | 'el-red'
+
   export interface BlogConfig {
-    blog?: false
     /**
      * 内置一些主题色
      * @default 'vp-default'
@@ -115,6 +117,7 @@ export namespace Theme {
      * @default true
      */
     backToTop?: boolean | BackToTop
+    backToComment?: boolean | BackToComment
   }
 
   export interface BackToTop {
@@ -129,6 +132,23 @@ export namespace Theme {
      * @recommend https://iconbuddy.app/search?q=fire
      */
     icon?: string
+  }
+
+  export interface BackToComment {
+    /**
+     * @default '评论'
+     */
+    label?: string
+    /**
+     * 自定义图标，SVG 格式
+     * @recommend https://iconbuddy.app/search?q=fire
+     */
+    icon?: string
+    /**
+     * 移动端最小化按钮
+     * @default true
+     */
+    mobileMinify?: boolean
   }
 
   export interface FooterItem {
@@ -151,6 +171,7 @@ export namespace Theme {
      */
     list?: string | string[] | FooterItem | FooterItem[]
   }
+
   export interface Config extends DefaultTheme.Config {
     blog?: BlogConfig
   }
