@@ -3,18 +3,20 @@
 <script setup lang="ts">
 import DefaultTheme from 'vitepress/theme'
 import Weather from "./components/Weather.vue";
+import BlogHomeHeaderAvatar from "./components/BlogHomeHeaderAvatar.vue";
 </script>
 
 <template>
   <DefaultTheme.Layout>
-    <template #doc-before>
-      <slot name="doc-before"/>
-    </template>
     <template #aside-top>
       <Weather/>
     </template>
+    <!-- 自定义首页 -->
     <template #home-hero-before>
       <slot name="home-hero-before"/>
+      <div class="home">
+        <BlogHomeHeaderAvatar />
+      </div>
     </template>
   </DefaultTheme.Layout>
 </template>

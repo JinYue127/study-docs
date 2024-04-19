@@ -1,6 +1,7 @@
 import Layout from './Layout.vue'
 import DefaultTheme from 'vitepress/theme'
 import {module} from "./constants";
+import type {Options} from 'oh-my-live2d'
 import {nextTick, onMounted, toRefs, watch} from 'vue';
 import giscusTalk from "vitepress-plugin-comment-with-giscus";
 import {useData, useRoute} from "vitepress";
@@ -18,6 +19,39 @@ import './styles/inline-theme.var.css'
 import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 
+const defaultModelOptions: any = {
+  scale: 0.08,
+  position: [-30, 0],
+  stageStyle: {
+    width: 220
+  },
+  mobilePosition: [-10, 0],
+  mobileScale: 0.05,
+  mobileStageStyle: {
+    width: 150
+  },
+}
+const defaultOptions: Options = {
+  tips: {
+    copyTips: {
+      duration: 2000,
+      message: ['复制成功，感谢您的支持！'],
+    },
+    style: {
+      top: '-50px',
+      fontSize: '14px',
+      padding: '10px',
+      width: '200px'
+    },
+    mobileStyle: {
+      top: '-80px',
+      left: '80px',
+      fontSize: '14px',
+      padding: '4px 10px',
+      width: '110px'
+    }
+  }
+}
 export default {
   Layout: withConfigProvider(Layout),
   extends: DefaultTheme,
@@ -69,6 +103,8 @@ export default {
     if (!import.meta.env.SSR) {
       const {loadOml2d} = await import('oh-my-live2d');
       loadOml2d({
+        ...defaultOptions,
+        mobileDisplay: true,
         menus: {
           items: (defaultItems) => {
             return [
@@ -83,7 +119,10 @@ export default {
             ]
           }
         },
-        models: module
+        models: module.map(moduleItem => ({
+          ...defaultModelOptions,
+          ...moduleItem,
+        }))
       });
     }
   },
