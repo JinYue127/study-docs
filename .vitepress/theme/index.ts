@@ -4,14 +4,22 @@ import {module} from "./constants";
 import {nextTick, onMounted, toRefs, watch} from 'vue';
 import giscusTalk from "vitepress-plugin-comment-with-giscus";
 import {useData, useRoute} from "vitepress";
-import "vitepress-markdown-timeline/dist/theme/index.css";
 import mediumZoom from "medium-zoom";
-import './styles/index.scss'
 import googleAnalytics from 'vitepress-plugin-google-analytics'
 import {enhanceAppWithTabs} from 'vitepress-plugin-tabs/client'
+import {withConfigProvider} from "./composables/config/blog";
+// 引入时间线组件样式
+import "vitepress-markdown-timeline/dist/theme/index.css";
+// override style
+import './styles/index.scss'
+// 内置一些特殊的主题色
+import './styles/inline-theme.var.css'
+// element-ui
+import 'element-plus/dist/index.css'
+import 'element-plus/theme-chalk/dark/css-vars.css'
 
 export default {
-  Layout,
+  Layout: withConfigProvider(Layout),
   extends: DefaultTheme,
   setup() {
     const {frontmatter} = toRefs(useData());
