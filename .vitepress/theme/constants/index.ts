@@ -4,14 +4,6 @@ export const module = [
     position: [-10, 20]
   },
   {
-    "path": "https://model.oml2d.com/Pio/model.json",
-    "scale": 0.4,
-    "position": [0, 50],
-    "stageStyle": {
-      "height": 300
-    }
-  },
-  {
     "path": "https://model.oml2d.com/cat-black/model.json",
     "scale": 0.15,
     "position": [0, 20],

@@ -1,6 +1,11 @@
 import {DefaultTheme} from "vitepress";
 
 export namespace Theme {
+  export type ThemeableImage =
+    | string
+    | { src: string; alt?: string }
+    | { light: string; dark: string; alt?: string }
+
   export interface PageMeta {
     title: string
     date: string
@@ -78,6 +83,13 @@ export namespace Theme {
     hiddenCover?: boolean
   }
 
+  export interface FriendLink {
+    nickname: string
+    des: string
+    url: string
+    avatar: ThemeableImage
+  }
+
   export type ThemeColor =
     | 'vp-default'
     | 'vp-green'
@@ -98,6 +110,8 @@ export namespace Theme {
     pagesData: PageData[]
     author?: string
     home?: HomeBlog
+    article?: ArticleConfig
+    authorList?: Omit<FriendLink, 'avatar'>[]
     /**
      * 首页页脚
      */

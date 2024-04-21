@@ -5,6 +5,7 @@ import DefaultTheme from 'vitepress/theme'
 import Weather from "./components/Weather.vue";
 import BlogHomeHeaderAvatar from "./components/BlogHomeHeaderAvatar.vue";
 import BlogBackToTopOrComment from "./components/BlogBackToTopOrComment.vue";
+import BlogArticleAnalyze from "./components/BlogArticleAnalyze.vue";
 </script>
 
 <template>
@@ -23,6 +24,13 @@ import BlogBackToTopOrComment from "./components/BlogBackToTopOrComment.vue";
       <slot name="doc-after"/>
       <ClientOnly>
         <BlogBackToTopOrComment/>
+      </ClientOnly>
+    </template>
+    <template #doc-before>
+      <slot name="doc-before"/>
+      <!-- 阅读时间分析 -->
+      <ClientOnly>
+        <BlogArticleAnalyze/>
       </ClientOnly>
     </template>
   </DefaultTheme.Layout>
