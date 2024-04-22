@@ -34,6 +34,12 @@ export default withMermaid(
       },
     },
     srcDir: 'src',
+    socialLinks: [
+      {
+        icon: 'github',
+        link: 'https://github.com/JinYue127/study-docs'
+      }
+    ],
     title: "Docs",
     description: "good good study,day day up",
     head: [
@@ -153,13 +159,6 @@ export default withMermaid(
           items: set_sidebar('/后端/nest')
         }
       },
-
-      socialLinks: [
-        {
-          icon: 'github',
-          link: 'https://github.com/JinYue127/study-docs'
-        }
-      ]
     }
   })
 )

@@ -1,9 +1,7 @@
-import {BlogConfig} from "./type";
+import {BlogConfig} from "./theme/type";
 
 export const blogTheme:BlogConfig = {
-  pagesData: [],
   backToComment: {
     mobileMinify: true,
   },
-  author:'jinyue'
 }
