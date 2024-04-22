@@ -1,3 +1,5 @@
+import {DefaultTheme} from "vitepress";
+
 export type ThemeableImage =
   | string
   | { src: string; alt?: string }
@@ -181,3 +183,6 @@ export interface Footer {
    */
   list?: string | string[] | FooterItem | FooterItem[]
 }
+  export interface Config extends DefaultTheme.Config {
+    blog?: BlogConfig
+  }

@@ -1,9 +1,9 @@
 import type {Component, InjectionKey, Ref} from 'vue'
 import {computed, defineComponent, h, inject, provide,} from "vue";
-import type {Theme} from './index'
 import {useData, useRoute, withBase} from "vitepress";
+import {Config} from "../../../type";
 
-const configSymbol: InjectionKey<Ref<Theme.Config>> = Symbol('theme-config')
+const configSymbol: InjectionKey<Ref<Config>> = Symbol('theme-config')
 
 export function useConfig() {
   return {
@@ -11,7 +11,7 @@ export function useConfig() {
   }
 }
 
-function resolveConfig(config: Theme.Config): Theme.Config {
+function resolveConfig(config: Config): Config {
   return {
     ...config,
     blog: {
