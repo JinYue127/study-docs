@@ -128,6 +128,11 @@ export default withMermaid(
           ]
         },
         {
+          text: 'issue', items: [
+            {text: 'git报错', link: '/issue/git报错'}
+          ]
+        },
+        {
           text: '其他', items: [
             {text: 'markdown扩展', link: '/other/markdown扩展/index'},
           ]
