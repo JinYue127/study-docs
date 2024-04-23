@@ -3,7 +3,7 @@
     <!-- 时间轴头部 -->
     <div class="timeline-header">
       <div v-if="$category" class="header-item">
-        <img src="/study-docs/img/svg/pigeonhole.svg" alt="">
+        <img src="/img/pigeonhole.png" alt="">
         <div>
           {{ $category }} (共 {{ $articleData.length }} 篇)
         </div>
@@ -11,7 +11,7 @@
                    style="margin-left: 5px;width: 15px;height: 15px"/>
       </div>
       <div v-else-if="$tag" class="header-item">
-        <img src="/study-docs/img/svg/pigeonhole.svg" alt="">
+        <img src="/img/pigeonhole.png" alt="">
         <div>
           {{ $category }} (共 {{ $articleData.length }} 篇)
         </div>
@@ -19,7 +19,7 @@
                    style="margin-left: 5px;width: 15px;height: 15px"/>
       </div>
       <div v-else-if="$year" class="header-item">
-        <img src="/study-docs/img/svg/pigeonhole.svg" alt="">
+        <img src="/img/pigeonhole.png" alt="">
         <div>
           {{ $category }} (共 {{ $articleData.length }} 篇)
         </div>
@@ -27,7 +27,7 @@
                    style="margin-left: 5px;width: 15px;height: 15px"/>
       </div>
       <div v-else class="header-item">
-        <img src="/study-docs/img/svg/pigeonhole.svg" alt="">
+        <img src="/img/pigeonhole.png" alt="">
         <div>
           共 {{ articleData.length }} 篇，未完待续······
         </div>

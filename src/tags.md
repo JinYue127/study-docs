@@ -4,6 +4,7 @@ aside: false
 editLink: false
 lastUpdated: false
 comment: false
+hiddenWeather: true
 ---
 
 <ClientOnly>
