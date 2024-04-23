@@ -9,7 +9,6 @@ export const markdown: MarkdownOptions = {
     light: 'github-light',
     dark: 'github-dark-dimmed'
   },
-  // lineNumbers: true, // 启用行号
 
   config: (md) => {
 

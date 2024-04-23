@@ -1,5 +1,5 @@
 <template>
-  <div class="weather-wrap">
+  <div class="weather-wrap" v-if="!hiddenWeather">
     <div class="left">
       <div class="top">{{ weather?.city }}</div>
       <div class="mid"
@@ -14,8 +14,14 @@
   </div>
 </template>
 <script setup lang="ts">
-import {onMounted, ref} from 'vue';
+import {computed, onMounted, ref} from 'vue';
 import WeatherJson from '../constants/weather.json';
+import {useData} from "vitepress";
+
+const {frontmatter} = useData()
+const hiddenWeather = computed(() => {
+  return frontmatter.value.hiddenWeather === true
+})
 
 interface IWeather {
   icon?: string;

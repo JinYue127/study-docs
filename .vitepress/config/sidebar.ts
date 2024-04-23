@@ -11,18 +11,16 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   '/categories/solutions/': getItemsByDate("categories/solutions"),
   '/categories/tools/': getItemsByDate("categories/tools"),
 
-  '/courses/java/': getItems("courses/java"),
-  '/courses/mysql/': getItems("courses/mysql"),
-  '/courses/mybatis/': getItems("courses/mybatis"),
+  '/courses/array/': getItems("courses/array"),
+  '/courses/typescript/': getItems("courses/typescript"),
+  '/courses/nest/': getItems("courses/nest"),
 }
 
 /**
  * 根据 某分类/YYYY/MM/dd/xxx.md 的目录格式, 获取侧边栏分组及分组下标题
  *
- * /categories/issues/2022/07/20/xxx.md
+ * /categories/issues/2024/04/23/xxx.md
  *
- * @param path 扫描基础路径
- * @returns {DefaultTheme.SidebarItem[]}
  */
 function getItemsByDate(path: string) {
   // 侧边栏年份分组数组
@@ -31,7 +29,7 @@ function getItemsByDate(path: string) {
   let topArticleItems: DefaultTheme.SidebarItem[] = [];
 
   // 1.获取所有年份目录
-  sync(`docs/${path}/*`, {
+  sync(`src/${path}/*`, {
     onlyDirectories: true,
     objectMode: true,
   }).forEach(({name}) => {
@@ -40,20 +38,20 @@ function getItemsByDate(path: string) {
     let articleItems: DefaultTheme.SidebarItem[] = [];
 
     // 2.获取所有月份目录
-    sync(`docs/${path}/${year}/*`, {
+    sync(`src/${path}/${year}/*`, {
       onlyDirectories: true,
       objectMode: true,
     }).forEach(({name}) => {
       let month = name
 
       // 3.获取所有日期目录
-      sync(`docs/${path}/${year}/${month}/*`, {
+      sync(`src/${path}/${year}/${month}/*`, {
         onlyDirectories: true,
         objectMode: true,
       }).forEach(({name}) => {
         let day = name;
         // 4.获取日期目录下的所有文章
-        sync(`docs/${path}/${year}/${month}/${day}/*`, {
+        sync(`src/${path}/${year}/${month}/${day}/*`, {
           onlyFiles: true,
           objectMode: true,
         }).forEach((article) => {
@@ -76,9 +74,9 @@ function getItemsByDate(path: string) {
       })
     })
 
-    // 添加年份分组
+    // 添加年份分组  /img/svg/chinese-zodiac/${getChineseZodiac(year.replace('年', ''))}.svg
     yearGroups.unshift({
-      text: `<img class="chinese-zodiac" style="position: static; vertical-align: middle; padding-bottom: 3px;" src="/img/svg/chinese-zodiac/${getChineseZodiac(year.replace('年', ''))}.svg" title="${getChineseZodiacAlias(year.replace('年', ''))}" alt="生肖">
+      text: `<img class="chinese-zodiac" style="position: static; vertical-align: middle; padding-bottom: 3px;" src="/study-docs/img/svg/chinese-zodiac/${getChineseZodiac(year.replace('年', ''))}.svg" title="${getChineseZodiacAlias(year.replace('年', ''))}" alt="生肖">
             ${year}年 (${articleItems.length}篇)`,
       items: articleItems,
       collapsed: true,
@@ -111,8 +109,6 @@ function getItemsByDate(path: string) {
  *
  * courses/mybatis/01-MyBatis基础/01-xxx.md
  *
- * @param path 扫描基础路径
- * @returns {DefaultTheme.SidebarItem[]}
  */
 function getItems(path: string) {
   // 侧边栏分组数组
@@ -125,13 +121,13 @@ function getItems(path: string) {
   const titleCollapsedSize = 20;
 
   // 1.获取所有分组目录
-  sync(`docs/${path}/*`, {
+  sync(`src/${path}/*`, {
     onlyDirectories: true,
     objectMode: true,
   }).forEach(({name}) => {
     let groupName = name;
     // 2.获取分组下的所有文章
-    sync(`docs/${path}/${groupName}/*`, {
+    sync(`src/${path}/${groupName}/*`, {
       onlyFiles: true,
       objectMode: true,
     }).forEach((article) => {
@@ -167,7 +163,7 @@ function getItems(path: string) {
  *
  * @param groups 分组数据
  */
-function addOrderNumber(groups) {
+function addOrderNumber(groups: any) {
   for (let i = 0; i < groups.length; i++) {
     for (let j = 0; j < groups[i].items.length; j++) {
       const items = groups[i].items;

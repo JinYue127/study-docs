@@ -23,13 +23,6 @@ export default withMermaid(
     description: metaData.description,
     head: head,
     cleanUrls: true,
-    vue: {
-      template: {
-        compilerOptions: {
-          isCustomElement: (tag) => customElements.includes(tag),
-        },
-      },
-    },
     themeConfig: {
       blog: blogTheme,
       footer: {

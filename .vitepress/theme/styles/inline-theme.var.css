@@ -7,8 +7,9 @@ html[theme="vp-green"] {
   --vp-c-brand-3: var(--vp-c-green-3);
   --vp-c-brand-soft: var(--vp-c-green-soft);
 }
+
 /* VitePress 黄色 */
-html[theme="vp-yellow"]{
+html[theme="vp-yellow"] {
   --vp-c-brand-1: var(--vp-c-yellow-1);
   --vp-c-brand-2: var(--vp-c-yellow-2);
   --vp-c-brand-3: var(--vp-c-yellow-3);
@@ -16,7 +17,7 @@ html[theme="vp-yellow"]{
 }
 
 /* VitePress 红色 */
-html[theme="vp-red"]{
+html[theme="vp-red"] {
   --vp-c-brand-1: var(--vp-c-red-1);
   --vp-c-brand-2: var(--vp-c-red-2);
   --vp-c-brand-3: var(--vp-c-red-3);
@@ -24,7 +25,7 @@ html[theme="vp-red"]{
 }
 
 /* element plus 蓝色 */
-html[theme="el-blue"]{
+html[theme="el-blue"] {
   --vp-c-brand-1: var(--el-color-primary);
   --vp-c-brand-2: var(--el-color-primary-light-3);
   --vp-c-brand-3: var(--el-color-primary-light-5);
@@ -32,7 +33,7 @@ html[theme="el-blue"]{
 }
 
 /* element plus 绿色 */
-html[theme="el-green"]{
+html[theme="el-green"] {
   --vp-c-brand-1: var(--el-color-success);
   --vp-c-brand-2: var(--el-color-success-light-3);
   --vp-c-brand-3: var(--el-color-success-light-5);
@@ -40,7 +41,7 @@ html[theme="el-green"]{
 }
 
 /* element plus 黄色 */
-html[theme="el-yellow"]{
+html[theme="el-yellow"] {
   --vp-c-brand-1: var(--el-color-warning);
   --vp-c-brand-2: var(--el-color-warning-light-3);
   --vp-c-brand-3: var(--el-color-warning-light-5);
@@ -48,9 +49,37 @@ html[theme="el-yellow"]{
 }
 
 /* element plus 红色 */
-html[theme="el-red"]{
+html[theme="el-red"] {
   --vp-c-brand-1: var(--el-color-danger);
   --vp-c-brand-2: var(--el-color-danger-light-3);
   --vp-c-brand-3: var(--el-color-danger-light-5);
   --vp-c-brand-soft: var(--el-color-danger-light-9);
+}
+
+.text-color-red {
+  --color-red: 254 45 70;
+  --tw-text-opacity: 1;
+  color: rgb(var(--color-red)/var(--tw-text-opacity));
+}
+
+.text-color-orange {
+  --color-orange: 255 102 0;
+  --tw-text-opacity: 1;
+  color: rgb(var(--color-orange)/var(--tw-text-opacity));
+}
+
+.text-color-yellow {
+  --color-yellow: 250 169 14;
+  --tw-text-opacity: 1;
+  color: rgb(var(--color-yellow)/var(--tw-text-opacity));
+}
+
+.text-color-gray {
+  --color-gray: 145 149 163;
+  --tw-text-opacity: 1;
+  color: rgb(var(--color-gray)/var(--tw-text-opacity));
+}
+
+.mr-\[6px\] {
+  margin-right: 6px;
 }

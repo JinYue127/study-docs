@@ -6,7 +6,7 @@ import {localSearchOptions} from './search/local-search';
 export const themeConfig: DefaultTheme.Config = {
   nav, // 导航栏配置
   sidebar, // 侧边栏配置
-  logo: '/logo.png',
+  logo: '/study-docs/logo.png',
   outline: {
     label: '页面导航',
     level: 'deep'
@@ -48,7 +48,7 @@ export const themeConfig: DefaultTheme.Config = {
   // @ts-ignore
   articleMetadataConfig: {
     author: 'JinYue', // 文章全局默认作者名称
-    authorLink: '/about/me', // 点击作者名时默认跳转的链接
+    authorLink: '/study-docs/about/me', // 点击作者名时默认跳转的链接
     showViewCount: false, // 是否显示文章阅读数, 需要在 docs/.vitepress/theme/api/config.js 及 interface.js 配置好相应 API 接口
   },
 }
