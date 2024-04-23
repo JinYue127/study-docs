@@ -40,7 +40,10 @@ export function getQueryParam(paramName: string) {
 export function goToLink(url: string, paramName: string, paramValue: any) {
   console.log('goToLink', url, paramName, paramValue);
   if (paramName) {
-    const newUrl = '/study-docs/' + url + '?' + paramName + '=' + paramValue
+    let newUrl =url.startsWith('/study-docs/') ? url : `/study-docs/${url}`
+    if (!url.startsWith('/study-docs/')) {
+       newUrl = '/study-docs/' + url
+    }
     console.log('newUrl', newUrl)
     // window.location.href = url + '?' + paramName + '=' + paramValue;
   } else {
