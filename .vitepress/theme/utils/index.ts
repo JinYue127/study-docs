@@ -42,9 +42,9 @@ export function goToLink(url: string, paramName: string, paramValue: any) {
   if (paramName) {
     let newUrl =url.startsWith('/study-docs/') ? url : `/study-docs/${url}`
     if (!url.startsWith('/study-docs/')) {
-       newUrl = '/study-docs/' + url
+       newUrl = '/study-docs' + url
     }
-    console.log('newUrl', newUrl)
+    console.log('newUrl', newUrl+ '?' + paramName + '=' + paramValue)
     // window.location.href = url + '?' + paramName + '=' + paramValue;
   } else {
     window.location.href = url;
