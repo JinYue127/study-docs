@@ -4,7 +4,7 @@
  * @param date 待格式化时间
  * @returns 格式化后的时间(YYYY/MM/dd AM hh:mm)
  */
-export function formatDate(date:string) {
+export function formatDate(date: string) {
   const formatDate = new Date(date);
   return formatDate.toLocaleString('zh', {
     year: 'numeric',
@@ -21,7 +21,7 @@ export function formatDate(date:string) {
  * @param paramName 参数名
  * @returns 参数值
  */
-export function getQueryParam(paramName:string) {
+export function getQueryParam(paramName: string) {
   const reg = new RegExp("(^|&)" + paramName + "=([^&]*)(&|$)");
   let value = decodeURIComponent(window.location.search.substr(1)).match(reg);
   if (value != null) {
@@ -37,10 +37,10 @@ export function getQueryParam(paramName:string) {
  * @param paramName 参数名
  * @param paramValue 参数值
  */
-export function goToLink(url:string, paramName:string, paramValue:any) {
+export function goToLink(url: string, paramName: string, paramValue: any) {
   console.log('goToLink', url, paramName, paramValue);
   if (paramName) {
-    const newUrl =url + '?' + paramName + '=' + paramValue
+    const newUrl = '/study-docs/' + url + '?' + paramName + '=' + paramValue
     console.log('newUrl', newUrl)
     // window.location.href = url + '?' + paramName + '=' + paramValue;
   } else {
