@@ -40,7 +40,9 @@ export function getQueryParam(paramName:string) {
 export function goToLink(url:string, paramName:string, paramValue:any) {
   console.log('goToLink', url, paramName, paramValue);
   if (paramName) {
-    window.location.href = url + '?' + paramName + '=' + paramValue;
+    const newUrl =url + '?' + paramName + '=' + paramValue
+    console.log('newUrl', newUrl)
+    // window.location.href = url + '?' + paramName + '=' + paramValue;
   } else {
     window.location.href = url;
   }
