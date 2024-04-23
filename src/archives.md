@@ -1,12 +1,12 @@
 ---
-title: 我的标签
+title: 我的归档
 aside: false
 editLink: false
 lastUpdated: false
+showComment: false
 comment: false
 ---
 
 <ClientOnly>
-
-[//]: # (	<Tag />)
+	<Archive />
 </ClientOnly>

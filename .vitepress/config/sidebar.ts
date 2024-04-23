@@ -15,13 +15,12 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   '/courses/typescript/': getItems("courses/typescript"),
   '/courses/nest/': getItems("courses/nest"),
 }
+
 /**
  * 根据 某分类/YYYY/MM/dd/xxx.md 的目录格式, 获取侧边栏分组及分组下标题
  *
  * /categories/issues/2024/04/23/xxx.md
  *
- * @param path 扫描基础路径
- * @returns {DefaultTheme.SidebarItem[]}
  */
 function getItemsByDate(path: string) {
   // 侧边栏年份分组数组
@@ -110,8 +109,6 @@ function getItemsByDate(path: string) {
  *
  * courses/mybatis/01-MyBatis基础/01-xxx.md
  *
- * @param path 扫描基础路径
- * @returns {DefaultTheme.SidebarItem[]}
  */
 function getItems(path: string) {
   // 侧边栏分组数组
@@ -166,7 +163,7 @@ function getItems(path: string) {
  *
  * @param groups 分组数据
  */
-function addOrderNumber(groups) {
+function addOrderNumber(groups: any) {
   for (let i = 0; i < groups.length; i++) {
     for (let j = 0; j < groups[i].items.length; j++) {
       const items = groups[i].items;

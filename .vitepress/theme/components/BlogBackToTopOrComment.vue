@@ -47,7 +47,7 @@ const CommentIcon = backToCommentConfig?.icon
     : h(Comment)
 const {frontmatter} = useData()
 const showComment = computed(() => {
-  return frontmatter.value.showComment !== false
+  return frontmatter.value.comment !== false
 })
 
 function handleScrollToComment() {
