@@ -4,7 +4,7 @@
  * @param date 待格式化时间
  * @returns 格式化后的时间(YYYY/MM/dd AM hh:mm)
  */
-export function formatDate(date) {
+export function formatDate(date:string) {
   const formatDate = new Date(date);
   return formatDate.toLocaleString('zh', {
     year: 'numeric',
@@ -21,7 +21,7 @@ export function formatDate(date) {
  * @param paramName 参数名
  * @returns 参数值
  */
-export function getQueryParam(paramName) {
+export function getQueryParam(paramName:string) {
   const reg = new RegExp("(^|&)" + paramName + "=([^&]*)(&|$)");
   let value = decodeURIComponent(window.location.search.substr(1)).match(reg);
   if (value != null) {
@@ -33,10 +33,11 @@ export function getQueryParam(paramName) {
 /**
  * 跳转到指定链接
  *
+ * @param url
  * @param paramName 参数名
  * @param paramValue 参数值
  */
-export function goToLink(url, paramName, paramValue) {
+export function goToLink(url:string, paramName:string, paramValue:any) {
   if (paramName) {
     window.location.href = url + '?' + paramName + '=' + paramValue;
   } else {
@@ -49,7 +50,7 @@ export function goToLink(url, paramName, paramValue) {
  *
  * @param year 年份
  */
-export function getChineseZodiac(year) {
+export function getChineseZodiac(year:number) {
   const arr = ['monkey', 'rooster', 'dog', 'pig', 'rat', 'ox', 'tiger', 'rabbit', 'dragon', 'snake', 'horse', 'goat'];
   return arr[year % 12];
 }
@@ -59,7 +60,7 @@ export function getChineseZodiac(year) {
  *
  * @param year 年份
  */
-export function getChineseZodiacAlias(year) {
+export function getChineseZodiacAlias(year:number) {
   const arr = ['猴年', '鸡年', '狗年', '猪年', '鼠年', '牛年', '虎年', '兔年', '龙年', '蛇年', '马年', '羊年'];
   return arr[year % 12];
 }

@@ -26,7 +26,7 @@ export default withMermaid(
     vue: {
       template: {
         compilerOptions: {
-          isCustomElement: (tag) => customElements.includes(tag),
+          // isCustomElement: (tag) => customElements.includes(tag),
         },
       },
     },
