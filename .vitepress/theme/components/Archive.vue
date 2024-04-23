@@ -111,7 +111,7 @@ let $year;
 function initTimeline() {
   $articleData = [];
   archiveData = {};
-
+  console.log(articleData,'articleData')
   // 如果URL路径有category或tag或year参数, 默认筛选出指定category或tag或year的文章数据
   // 例如: /archives?category=Bug万象集
   // 例如: /archives?tag=JVM
