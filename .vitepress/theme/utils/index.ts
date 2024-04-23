@@ -38,14 +38,12 @@ export function getQueryParam(paramName: string) {
  * @param paramValue 参数值
  */
 export function goToLink(url: string, paramName: string, paramValue: any) {
-  console.log('goToLink', url, paramName, paramValue);
   if (paramName) {
     let newUrl =url.startsWith('/study-docs/') ? url : `/study-docs/${url}`
     if (!url.startsWith('/study-docs/')) {
        newUrl = '/study-docs' + url
     }
-    console.log('newUrl', newUrl+ '?' + paramName + '=' + paramValue)
-    // window.location.href = url + '?' + paramName + '=' + paramValue;
+    window.location.href = newUrl + '?' + paramName + '=' + paramValue;
   } else {
     window.location.href = url;
   }
