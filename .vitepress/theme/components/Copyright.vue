@@ -54,6 +54,7 @@
   color: var(--vp-c-text-2);
   font-size: 15px;
   margin-top: 50px;
+  margin-bottom: 10px;
 }
 
 .copyright .content {
