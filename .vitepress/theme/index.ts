@@ -20,6 +20,7 @@ import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import ArticleMetadata from './components/ArticleMetadata.vue'
 import Archive from './components/Archive.vue'
+import Tag from './components/Tag.vue'
 
 const defaultModelOptions: any = {
   scale: 0.08,
@@ -99,6 +100,7 @@ export default {
   async enhanceApp({app, router, siteData}) {
     app.component('ArticleMetadata', ArticleMetadata)
     app.component('Archive', Archive)
+    app.component('Tag', Tag)
     enhanceAppWithTabs(app)
     googleAnalytics({
       id: 'G-JKGZZT00ND', //跟踪ID，在analytics.google.com注册即可
