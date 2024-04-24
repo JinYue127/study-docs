@@ -1,7 +1,7 @@
 ---
 layout: home
 
-title: jiny的知识库
+title: Jinyue的知识库
 titleTemplate: 个人技术知识库，记录和分享个人碎片化、结构化、体系化的技术知识内容
 
 hero:

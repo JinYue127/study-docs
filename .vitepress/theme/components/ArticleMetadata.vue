@@ -148,7 +148,7 @@ if (data.showViewCount) {
   margin-top: -0.5px;
 }
 
-.meta-icon, meta-content {
+.meta-icon, .meta-content {
   display: inline-block;
   margin-right: .375rem;
   vertical-align: middle;
