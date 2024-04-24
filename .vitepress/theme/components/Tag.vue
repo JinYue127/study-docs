@@ -179,7 +179,7 @@ svg:not(:root) {
   }
 }
 
-.card-box /deep/ .el-card__body {
+.card-box :deep(.el-card__body) {
   padding: 0;
 }
 
