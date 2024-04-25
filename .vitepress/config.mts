@@ -8,6 +8,9 @@ import {metaData} from "./config/constants";
 
 export default withMermaid(
   defineConfig({
+    sitemap: {
+      hostname: 'https://jinyue127.github.io/study-docs'
+    },
     base: '/study-docs/',
     srcDir: 'src',
     mermaid: {
