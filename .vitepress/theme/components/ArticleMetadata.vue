@@ -44,7 +44,7 @@
             d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3-7.7 16.2-7.7 35.2 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766z"></path><path
             d="M508 336c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176z m0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z"></path></svg>
       </span>
-      <span class="meta-content" v-text="viewCount" :title="viewCount"></span>
+      <span class="meta-content" id="busuanzi_value_page_pv"/>
     </div>
     <div class="meta-item" v-if="showCategory">
       <span class="meta-icon category">
@@ -98,28 +98,18 @@ const props = defineProps({
 });
 
 // 初始化文章元数据信息
-const {theme, page} = useData();
+const {theme} = useData();
 const data = reactive({
   isOriginal: props.article?.isOriginal ?? true,
   author: props.article?.author ?? theme.value.articleMetadataConfig.author,
   authorLink: props.article?.authorLink ?? theme.value.articleMetadataConfig.authorLink,
-  showViewCount: theme.value.articleMetadataConfig?.showViewCount ?? false,
-  viewCount: 0,
+  showViewCount: theme.value.articleMetadataConfig?.showViewCount ?? true,
   date: new Date(props.article.date),
   categories: props.article?.categories ?? [],
   tags: props.article?.tags ?? [],
   showCategory: props.showCategory
 });
-const {isOriginal, author, authorLink, showViewCount, viewCount, date, categories, tags, showCategory} = toRefs(data);
-
-if (data.showViewCount) {
-  // 记录并获取文章阅读数（使用文章标题 + 发布时间生成 MD5 值，作为文章的唯一标识）
-  // onMounted(() => {
-  //   $api.getArticleViewCount(md5(props.article.title + props.article.date), location.href, function(viewCountData) {
-  //     data.viewCount = viewCountData;
-  //   });
-  // });
-}
+const {isOriginal, author, authorLink, showViewCount, date, categories, tags, showCategory} = toRefs(data);
 </script>
 
 <style scoped>
