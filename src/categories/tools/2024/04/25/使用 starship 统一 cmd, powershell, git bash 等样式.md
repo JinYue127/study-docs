@@ -50,7 +50,7 @@ Invoke-Expression (&starship init powershell)
 load(io.popen('starship init cmd'):read("*a"))()
 ```
 
-# 让 git bash 使用 starship 的样式
+## 让 git bash 使用 starship 的样式
 
 在 `%HOMEPATH%` 指代的路径下 (可以在文件浏览器 explore.exe 地址栏中输入 %HOMEPATH%), 创建 `.bashrc` 文件, 将下面内容拷贝粘贴
 
