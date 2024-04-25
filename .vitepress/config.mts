@@ -29,8 +29,8 @@ export default withMermaid(
     themeConfig: {
       blog: blogTheme,
       footer: {
-        message: '学习文档'
-        // copyright: 'Copyright © 2019-present Evan You'
+        message: `本站总访问量 <span id="busuanzi_value_site_pv" /> 次`,
+        copyright: '本站访客数 <span id="busuanzi_value_site_uv" /> 人次'
       },
       ...themeConfig
     }
