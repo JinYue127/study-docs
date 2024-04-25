@@ -34,13 +34,13 @@ Invoke-Expression (&starship init powershell)
 
 ## 让 cmd 使用 starship 的样式
 
-首先需要下载 `clink`, `clink` 是一个增强 `cmd` 命令行编辑的软件
+首先需要下载 `clink`, clink 是一个增强 cmd 命令行编辑的软件
 
-可以使用 `scoop` 安装, 安装命令 `scoop install clink` , 安装完 `clink` 之后, 默认会修改注册表, 然后在启动` cmd.exe`
-自动启动 `clink` (前提是 `clink` 加入到环境变量中) , 如果没有的话, 则需要手动 `inject` 一下, 假设 `clink.exe`
-在你的 `PATH` 环境变量中找到, 执行 `clink autorun install` , 然后执行 `clink autorun show`
+可以使用 scoop 安装, 安装命令 `scoop install clink` , 安装完 clink 之后, 默认会修改注册表, 然后在启动 cmd.exe
+自动启动 clink (前提是 clink 加入到环境变量中) , 如果没有的话, 则需要手动 inject 一下, 假设 clink.exe
+在你的 PATH 环境变量中找到, 执行 `clink autorun install` , 然后执行 `clink autorun show`
 
-然后打开 `cmd`, 输入`clink info` , 如下所示
+然后打开 cmd, 输入 clink info , 如下所示
 
 ![image-20240425141855708](https://jiny127.oss-cn-hangzhou.aliyuncs.com/typora/image-20240425141855708.png)
 进入 `C:\Users\<用户名>\AppData\Local\clink` 文件夹, 然后创建` starship.lua` 文件, 往里面加入以下内容
