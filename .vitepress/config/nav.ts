@@ -31,6 +31,14 @@ export const nav: DefaultTheme.Config['nav'] = [
     activeMatch: '/archives'
   },
   {
+    text: '友情链接',
+    items: [
+      {text: 'Radash学习', link: 'https://jinyue12138.gitee.io/radash-study/'},
+      {text: 'wormhole', link: 'https://wormhole.app/'},
+      {text: '阿里小站', link: 'https://pan666.net/'},
+    ]
+  },
+  {
     text: '关于',
     items: [
       {text: '关于知识库', link: '/about/index', activeMatch: '/about/index'},
