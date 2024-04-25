@@ -51,7 +51,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 ```
 
 在浏览器中打开转发 `URL`，您将看到 `Web` 应用程序。
-![img.png](img.png)
+![img](https://jiny127.oss-cn-hangzhou.aliyuncs.com/typora/img.png)
 **Step 4:** 始终使用同一域
 如果要在每次使用 `ngrok` 时都保持相同的 `URL`，请在仪表板上创建一个静态域，然后使用该 `--domain` 标志要求 `ngrok`
 代理使用它。首先，停止 `Ctrl+C` ngrok，然后再次运行 ngrok：
