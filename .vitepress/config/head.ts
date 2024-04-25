@@ -6,6 +6,8 @@ export const head: HeadConfig[] = [
   ['meta', { name: 'author', content: 'JinYue' }],
   ['meta', { name: 'keywords', content: 'JinYue的知识库, 知识库, 博客' }],
 
+  ['meta', { name: 'referrer', content: 'no-referrer-when-downgrade' }],
+
   ['meta', { name: 'HandheldFriendly', content: 'True' }],
   ['meta', { name: 'MobileOptimized', content: '320' }],
   ['meta', { name: 'theme-color', content: '#3c8772' }],
