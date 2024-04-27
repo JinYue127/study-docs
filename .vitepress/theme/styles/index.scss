@@ -50,7 +50,13 @@ html.dark {
   margin-bottom: 0 !important;
   padding-bottom: 96px;
 }
-
+.VPFooter{
+  .container{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+  }
+}
 @media (min-width: 768px) {
   .VPHome {
     padding-bottom: 128px;

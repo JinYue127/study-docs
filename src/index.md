@@ -1,15 +1,15 @@
 ---
 layout: home
 
-title: jiny的知识库
+title: JinYue的知识库
 titleTemplate: 个人技术知识库，记录和分享个人碎片化、结构化、体系化的技术知识内容
 
 hero:
-  name: jiny的知识库
+  name: JinYue的知识库
   text: 专注 & 洞察 & 分享
   tagline: 个人技术知识库，记录 & 分享个人碎片化、结构化、体系化的技术知识内容。
   image:
-    src: /logo.png
+    src: /img/logo.png
     alt: Logo
   actions:
     - theme: brand

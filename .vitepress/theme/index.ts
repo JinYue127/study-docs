@@ -4,7 +4,7 @@ import {module} from "./constants";
 import type {Options} from 'oh-my-live2d'
 import {nextTick, onMounted, toRefs, watch} from 'vue';
 import giscusTalk from "vitepress-plugin-comment-with-giscus";
-import {useData, useRoute} from "vitepress";
+import {inBrowser, useData, useRoute} from "vitepress";
 import mediumZoom from "medium-zoom";
 import googleAnalytics from 'vitepress-plugin-google-analytics'
 import {enhanceAppWithTabs} from 'vitepress-plugin-tabs/client'
@@ -20,6 +20,8 @@ import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import ArticleMetadata from './components/ArticleMetadata.vue'
 import Archive from './components/Archive.vue'
+import Tag from './components/Tag.vue'
+import busuanzi from 'busuanzi.pure.js'
 
 const defaultModelOptions: any = {
   scale: 0.08,
@@ -99,10 +101,16 @@ export default {
   async enhanceApp({app, router, siteData}) {
     app.component('ArticleMetadata', ArticleMetadata)
     app.component('Archive', Archive)
+    app.component('Tag', Tag)
     enhanceAppWithTabs(app)
     googleAnalytics({
       id: 'G-JKGZZT00ND', //跟踪ID，在analytics.google.com注册即可
     })
+    if (inBrowser) {
+      router.onAfterRouteChanged = () => {
+        busuanzi.fetch()
+      }
+    }
     if (!import.meta.env.SSR) {
       const {loadOml2d} = await import('oh-my-live2d');
       loadOml2d({

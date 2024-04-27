@@ -8,6 +8,5 @@ hiddenWeather: true
 ---
 
 <ClientOnly>
-
-[//]: # (	<Tag />)
+	<Tag />
 </ClientOnly>
