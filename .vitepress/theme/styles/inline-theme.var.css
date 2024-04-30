@@ -83,3 +83,12 @@ html[theme="el-red"] {
 .mr-\[6px\] {
   margin-right: 6px;
 }
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    315deg,
+    #42d392 25%,
+    #647eff
+  )
+}
