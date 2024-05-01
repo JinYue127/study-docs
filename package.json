@@ -15,6 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/blueimp-md5": "^2.18.2",
+    "markdown-it-mathjax3": "^4.3.2",
     "mermaid": "^10.9.0",
     "sass": "^1.75.0",
     "vitepress": "^1.0.2",
@@ -35,7 +36,7 @@
     "gray-matter": "^4.0.3",
     "markdown-it-task-checkbox": "^1.0.6",
     "medium-zoom": "^1.1.0",
-    "oh-my-live2d": "^0.16.1",
+    "oh-my-live2d": "^0.17.0",
     "vitepress-markdown-timeline": "^1.2.1",
     "vitepress-plugin-comment-with-giscus": "^1.1.12",
     "vitepress-plugin-google-analytics": "^1.0.2",

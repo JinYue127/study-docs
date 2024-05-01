@@ -9,7 +9,10 @@ export const markdown: MarkdownOptions = {
     light: 'github-light',
     dark: 'github-dark-dimmed'
   },
-
+  image: {
+    lazyLoading: true
+  },
+  math: true,
   config: (md) => {
 
     md.use(timeline).use(taskLists, {
