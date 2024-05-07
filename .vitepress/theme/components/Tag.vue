@@ -37,7 +37,7 @@
         </template>
         <div class="result-item" v-for="(article, index) in tags[selectTag]" :key="index">
           <h3 class="result-item-title">
-            <a :href="article.path" target="_blank">{{ article.title }}</a>
+            <a :href="article.url" target="_blank">{{ article.title }}</a>
           </h3>
           <!-- 文章元数据信息 -->
           <ArticleMetadata :article="article" :key="md5(article.date)"/>
@@ -53,7 +53,7 @@
 <script lang="ts" setup>
 import {computed, ref} from 'vue';
 import md5 from 'blueimp-md5';
-import {data as articleData} from '../../../article.data.js';
+import {data as articleData} from '../../../posts.data.ts';
 import {getQueryParam} from "../utils";
 import WordCloud from "./WordCloud.vue";
 import {ElCard, ElCheckTag, ElEmpty} from 'element-plus'

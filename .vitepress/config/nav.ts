@@ -36,7 +36,6 @@ export const nav: DefaultTheme.Config['nav'] = [
       {text: '前端文章', link: 'https://fed.chanceyu.com/'},
       {text: 'Next.js学习', link: 'https://www.codewithantonio.com/'},
       {text: 'Radash学习', link: 'https://jinyue12138.gitee.io/radash-study/'},
-      {text: 'z-library', link: 'https://zh.z-library.se/popular'},
       {text: 'wormhole', link: 'https://wormhole.app/'},
       {text: '阿里小站', link: 'https://pan666.net/'},
       {text: 'z-library', link: 'https://zh.z-library.se/'},

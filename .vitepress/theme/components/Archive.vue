@@ -75,7 +75,7 @@
                    class="arco-icon arco-icon-bookmark" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter"
                    style="color: #00b42a;"><path d="M16 16h16M16 24h8"></path><path d="M24 41H8V6h32v17"></path><path
                   d="M30 29h11v13l-5.5-3.5L30 42V29Z"></path></svg>
-              <a :href="article.path" class="title" target="_blank">{{ article.title }}</a>
+              <a :href="article.url" class="title" target="_blank">{{ article.title }}</a>
               <br>
               <ArticleMetadata :article="article"/>
             </span>
@@ -95,7 +95,7 @@ import ArticleMetadata from "./ArticleMetadata.vue";
 import {Close} from '@element-plus/icons-vue'
 import {ElButton} from 'element-plus'
 
-import {data as articleData} from '../../../article.data.js';
+import {data as articleData} from '../../../posts.data.ts';
 
 let $articleData;
 let archiveData;
@@ -111,7 +111,6 @@ let $year;
 function initTimeline() {
   $articleData = [];
   archiveData = {};
-  console.log(articleData,'articleData')
   // 如果URL路径有category或tag或year参数, 默认筛选出指定category或tag或year的文章数据
   // 例如: /archives?category=Bug万象集
   // 例如: /archives?tag=JVM
@@ -141,7 +140,7 @@ function initTimeline() {
       }
     }
   } else {
-    $articleData.push(...articleData);
+    $articleData.push(...articleData as any);
   }
 
   // 文章数据归档处理
