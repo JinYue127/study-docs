@@ -37,7 +37,7 @@
         </template>
         <div class="result-item" v-for="(article, index) in tags[selectTag]" :key="index">
           <h3 class="result-item-title">
-            <a :href="article.url" target="_blank">{{ article.title }}</a>
+            <a :href="`/study-docs${article.url}`" target="_blank">{{ article.title }}</a>
           </h3>
           <!-- 文章元数据信息 -->
           <ArticleMetadata :article="article" :key="md5(article.date)"/>
