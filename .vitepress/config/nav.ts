@@ -34,7 +34,6 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: '友情链接',
     items: [
       {text: '前端文章', link: 'https://fed.chanceyu.com/'},
-      {text: 'z-library', link: 'https://zh.z-library.se/popular'},
       {text: 'Next.js学习', link: 'https://www.codewithantonio.com/'},
       {text: 'Radash学习', link: 'https://jinyue12138.gitee.io/radash-study/'},
       {text: 'z-library', link: 'https://zh.z-library.se/popular'},
