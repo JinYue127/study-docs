@@ -2,39 +2,93 @@
   <div id="word-cloud-container"></div>
 </template>
 
-<script lang="ts" setup>
-  import { onMounted, onBeforeUnmount } from 'vue';
-  import { WordCloud } from '@antv/g2plot';
+<script setup>
+import * as echarts from 'echarts';
+import 'echarts-wordcloud';
+import {onBeforeUnmount, onMounted} from "vue";
 
-  // 定义属性
-  const props = defineProps({
-    dataList: {
-      type: Array,
-      default: () => [],
+const props = defineProps({
+  dataList: {
+    type: Array,
+    required: true,
+    default: () => [],
+  },
+});
+
+let chartInstance;
+
+const initChart = () => {
+  chartInstance = echarts.init(document.getElementById("word-cloud-container")) // 可以设置主题色'dark'
+  const option = {
+    tooltip: {
+      show: true
     },
-  })
-
-  // 渲染 WordCloud
-  let wordCloud;
-  onMounted(() => {
-    wordCloud = new WordCloud("word-cloud-container", {
-      data: props.dataList,
-      wordField: 'name',
-      weightField: 'value',
-      colorField: 'name',
-      wordStyle: {
-        fontFamily: 'Verdana',
-        fontSize: [14, 35],
-        rotation: 0,
+    series: [{
+      //全局文本样式
+      textStyle: {
+        fontFamily: 'sans-serif',
+        fontWeight: 'bold',
+        // Color可以是一个回调函数或一个颜色字符串
+        color: function () {
+          // Random color
+          return 'rgb(' + [
+            Math.round(Math.random() * 160),
+            Math.round(Math.random() * 160),
+            Math.round(Math.random() * 160)
+          ].join(',') + ')';
+        }
       },
-      // 返回值设置成一个 [0, 1) 区间内的值，
-      // 可以让每次渲染的位置相同（前提是每次的宽高一致）。
-      random: () => 0.5,
-    });
-    wordCloud.render();
-  });
+      emphasis: {
+        focus: 'self',
 
-  onBeforeUnmount(() => {
-    wordCloud.destroy();
+        textStyle: {
+          // textShadowBlur: 10,
+          // textShadowColor: '#333'
+        }
+      },
+      gridSize: 20,
+
+      //设置为true，允许文字部分在画布外绘制。
+      //允许绘制大于画布大小的单词
+      //从echarts-wordcloud@2.1.0开始支持此选项
+      drawOutOfBound: false,
+
+      //如果字体太大而无法显示文本，
+      //是否收缩文本。如果将其设置为false，则文本将不渲染。如果设置为true，则文本将被缩小。
+      //从echarts-wordcloud@2.1.0开始支持此选项
+      shrinkToFit: true,
+
+      // 执行布局动画。当有大量的单词时，关闭它会导致UI阻塞。
+      layoutAnimation: true,
+      type: 'wordCloud',
+      rotationRange: [0, 0],
+      textPadding: 0,
+      shape: 'circle',
+      width: '100%',
+      height: '100%',
+      sizeRange: [14, 35],
+      data: props.dataList,
+    }],
+  };
+  // 添加词的点击事件处理函数
+
+  // chartInstance.on('click', function () {
+  //   console.log('click')
+  // });
+  //随着屏幕大小调节图表
+  window.addEventListener("resize", () => {
+    chartInstance.resize();
   });
+  chartInstance.setOption(option);
+};
+
+const disposeChart = () => {
+  window.removeEventListener("resize", () => {
+    chartInstance.resize();
+  });
+  chartInstance?.dispose()
+}
+onMounted(initChart);
+
+onBeforeUnmount(disposeChart);
 </script>
