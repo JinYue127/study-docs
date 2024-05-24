@@ -12,27 +12,26 @@ const {page, frontmatter} = useData();
 </script>
 
 <template>
-  <DefaultTheme.Layout>
-    <template #doc-footer-before>
-      <ClientOnly>
+  <ClientOnly>
+    <DefaultTheme.Layout>
+      <template #doc-footer-before>
         <Copyright
             v-if="(frontmatter?.aside ?? true) && (frontmatter?.showArticleMetadata ?? true) && !(frontmatter.authorLink)"
-            :key="md5(page.relativePath)"/>
-      </ClientOnly>
-    </template>
-    <template #aside-top>
-      <Weather/>
-    </template>
-    <template #doc-after>
-      <slot name="doc-after"/>
-      <ClientOnly>
+            :key="md5(page.relativePath)"
+        />
+      </template>
+
+      <template #aside-top>
+        <Weather/>
+      </template>
+
+      <template #doc-after>
+        <slot name="doc-after"/>
         <BlogBackToTopOrComment/>
-      </ClientOnly>
-    </template>
-<!--     <template #layout-bottom>-->
-<!--      111-->
-<!--    </template>-->
-  </DefaultTheme.Layout>
+      </template>
+
+    </DefaultTheme.Layout>
+  </ClientOnly>
 </template>
 
 <style scoped lang="scss">
