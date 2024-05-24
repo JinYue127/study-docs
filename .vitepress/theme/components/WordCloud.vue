@@ -2,9 +2,9 @@
   <div id="word-cloud-container"></div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import * as echarts from 'echarts';
-import 'echarts-wordcloud';
+require('echarts-wordcloud');
 import {onBeforeUnmount, onMounted} from "vue";
 
 const props = defineProps({
@@ -92,3 +92,6 @@ onMounted(initChart);
 
 onBeforeUnmount(disposeChart);
 </script>
+
+<style scoped>
+</style>
