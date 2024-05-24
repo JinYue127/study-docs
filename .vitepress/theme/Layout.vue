@@ -27,7 +27,9 @@ const {page, frontmatter} = useData();
 
       <template #doc-after>
         <slot name="doc-after"/>
-        <BlogBackToTopOrComment/>
+        <ClientOnly>
+          <BlogBackToTopOrComment/>
+        </ClientOnly>
       </template>
 
     </DefaultTheme.Layout>

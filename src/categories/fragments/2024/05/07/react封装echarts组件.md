@@ -55,3 +55,5 @@ function EchartsBox({options}: EchartsBoxProps) {
 export default memo(EchartsBox);
 
 ```
+
+test
