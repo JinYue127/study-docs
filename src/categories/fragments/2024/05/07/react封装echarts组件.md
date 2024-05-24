@@ -12,8 +12,6 @@ tags:
 
 # react封装echarts组件
 
-## test
-
 ```tsx
 import {memo, useEffect, useRef} from "react";
 import * as echarts from 'echarts';
