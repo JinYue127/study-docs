@@ -22,15 +22,13 @@
     "vitepress-plugin-mermaid": "^2.0.16",
     "vitepress-plugin-tabs": "^0.5.0"
   },
-  "volta": {
-    "node": "18.20.1"
-  },
   "dependencies": {
+    "@antv/g2plot": "^2.4.31",
     "@element-plus/icons-vue": "^2.3.1",
+    "@vueuse/core": "^10.11.0",
     "blueimp-md5": "^2.19.0",
     "busuanzi.pure.js": "^1.0.3",
     "dayjs": "^1.11.10",
-    "@antv/g2plot": "^2.4.31",
     "element-plus": "^2.7.3",
     "fast-glob": "^3.3.2",
     "gray-matter": "^4.0.3",
