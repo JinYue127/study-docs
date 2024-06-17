@@ -9,3 +9,4 @@ archive.tar.gz
 .idea
 /html/
 .vitepress/cache
+.vitepress/dist

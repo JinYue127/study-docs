@@ -11,6 +11,7 @@ export default withMermaid(
     sitemap: {
       hostname: 'https://jinyue127.github.io/study-docs/'
     },
+    metaChunk: true,
     base: '/study-docs/',
     srcDir: 'src',
     mermaid: {
