@@ -15,7 +15,7 @@ tags:
 
 ### 示例
 
-![example-pie](/echarts/example-pie1.png)
+![example-pie](/study-docs/echarts/example-pie1.png)
 
 ### 配置项
 
