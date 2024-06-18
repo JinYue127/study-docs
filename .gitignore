@@ -10,3 +10,4 @@ archive.tar.gz
 /html/
 .vitepress/cache
 .vitepress/dist
+.vitepress/temp

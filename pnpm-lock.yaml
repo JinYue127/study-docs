@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@antv/g-base': 0.5.11
+  '@antv/path-util': 2.0.15
+  '@antv/attr': 0.3.5
+
 importers:
 
   .:
@@ -68,16 +73,16 @@ importers:
         version: 10.9.1
       sass:
         specifier: ^1.75.0
-        version: 1.77.5
+        version: 1.77.6
       vitepress:
         specifier: ^1.2.2
-        version: 1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.5)(search-insights@2.14.0)
+        version: 1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.6)(search-insights@2.14.0)
       vitepress-plugin-mermaid:
         specifier: ^2.0.16
-        version: 2.0.16(mermaid@10.9.1)(vitepress@1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.5)(search-insights@2.14.0))
+        version: 2.0.16(mermaid@10.9.1)(vitepress@1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.6)(search-insights@2.14.0))
       vitepress-plugin-tabs:
         specifier: ^0.5.0
-        version: 0.5.0(vitepress@1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.5)(search-insights@2.14.0))(vue@3.4.29)
+        version: 0.5.0(vitepress@1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.6)(search-insights@2.14.0))(vue@3.4.29)
 
 packages:
 
@@ -167,8 +172,8 @@ packages:
   '@antv/event-emitter@0.1.3':
     resolution: {integrity: sha512-4ddpsiHN9Pd4UIlWuKVK1C4IiZIdbwQvy9i7DUSI3xNJ89FPUFt8lxDYj8GzzfdllV0NkJTRxnG+FvLk0llidg==}
 
-  '@antv/g-base@0.5.16':
-    resolution: {integrity: sha512-jP06wggTubDPHXoKwFg3/f1lyxBX9ywwN3E/HG74Nd7DXqOXQis8tsIWW+O6dS/h9vyuXLd1/wDWkMMm3ZzXdg==}
+  '@antv/g-base@0.5.11':
+    resolution: {integrity: sha512-10Hkq7XksVCqxZZrPkd6HTU9tb/+2meCVEMy/edhS4I/sokhcgC9m3fQP5bE8rA3EVKwELE7MJHZ98BEpVFqvQ==}
 
   '@antv/g-canvas@0.5.17':
     resolution: {integrity: sha512-sXYJMWTOlb/Ycb6sTKu00LcJqInXJY4t99+kSM40u2OfqrXYmaXDjHR7D2V0roMkbK/QWiWS9UnEidCR1VtMOA==}
@@ -193,9 +198,6 @@ packages:
 
   '@antv/path-util@2.0.15':
     resolution: {integrity: sha512-R2VLZ5C8PLPtr3VciNyxtjKqJ0XlANzpFb5sE9GE61UQqSRuSVSzIakMxjEPrpqbgc+s+y8i+fmc89Snu7qbNw==}
-
-  '@antv/path-util@3.0.1':
-    resolution: {integrity: sha512-tpvAzMpF9Qm6ik2YSMqICNU5tco5POOW7S4XoxZAI/B0L26adU+Md/SmO0BBo2SpuywKvzPH3hPT3xmoyhr04Q==}
 
   '@antv/scale@0.3.18':
     resolution: {integrity: sha512-GHwE6Lo7S/Q5fgaLPaCsW+CH+3zl4aXpnN1skOiEY0Ue9/u+s2EySv6aDXYkAqs//i0uilMDD/0/4n8caX9U9w==}
@@ -610,16 +612,16 @@ packages:
   '@vue/compiler-ssr@3.4.29':
     resolution: {integrity: sha512-rFbwCmxJ16tDp3N8XCx5xSQzjhidYjXllvEcqX/lopkoznlNPz3jyy0WGJCyhAaVQK677WWFt3YO/WUEkMMUFQ==}
 
-  '@vue/devtools-api@7.3.0':
-    resolution: {integrity: sha512-EQ6DIm9AuL9q6IzjjnxeHWgzHzZTI+0ZGyLyG6faLN1e0tzLWPut58OtvFbLP/hbEhE5zPlsdUsH1uFr7RVFYw==}
+  '@vue/devtools-api@7.3.1':
+    resolution: {integrity: sha512-yg2OQcnuez906E6/gDROLbUwI554PH5SWJMkomvOfGcPYjNpkK8LEy1pM1wxBtSVSlQbZKqiNgGQFp3Zw+0Jog==}
 
-  '@vue/devtools-kit@7.3.0':
-    resolution: {integrity: sha512-J9C+ue3Ka8cumQY/hMsNTcbb1tczqVBBXFMw4isa5YvPjyIBgEtJBfDSUVIK3nE+YWk7UNliUuCcE1GHEKaGcw==}
+  '@vue/devtools-kit@7.3.1':
+    resolution: {integrity: sha512-O9LXPo0kC/PGFBRBMvT5PHiSXr6ZdJTshVuGQ1L2mnIZlIBdTjdtCRYQg/OMcEA5JDJPeJT8bnDYBBUbssGjoA==}
     peerDependencies:
       vue: ^3.0.0
 
-  '@vue/devtools-shared@7.3.0':
-    resolution: {integrity: sha512-bYw4BtZclxzVrYBeYYHzNOcLlvVZbe9tutwtrixTtdgynHvuSJa5KI2MqWiumpGYm2feFI5sHlC8Vt61v4z18g==}
+  '@vue/devtools-shared@7.3.1':
+    resolution: {integrity: sha512-TYbJLZwBy5+SliE095T+V0IMwRu+oP7I2KAsDuNtSsjHKITZvrhz2fNEvik9NsTLcEQBBoX81NvdgpoB29JAog==}
 
   '@vue/reactivity@3.4.29':
     resolution: {integrity: sha512-w8+KV+mb1a8ornnGQitnMdLfE0kXmteaxLdccm2XwdFxXst4q/Z7SEboCV5SqJNpZbKFeaRBBJBhW24aJyGINg==}
@@ -876,6 +878,9 @@ packages:
     resolution: {integrity: sha512-VE5S6TNa+j8msksl7HwjxMHDM2yNK3XCkusIlpX5kwauBfXuyLAtNg9jCp/iHH61tgI4sb6R/EIMWCqEIdjT/g==}
     engines: {node: '>=12'}
 
+  d3-color@1.4.1:
+    resolution: {integrity: sha512-p2sTHSLCJI2QKunbGb7ocOh7DgTAn8IrLx21QRc/BSnodXM4sv6aLQlnfpvehFMLZEfBc6g9pH9SWQccFYfJ9Q==}
+
   d3-color@3.1.0:
     resolution: {integrity: sha512-zg/chbXyeBtMQ1LbD/WSoW2DpC3I0mpmPdW+ynRTj/x2DAWYrIY7qeZIHidozwV24m4iavr15lNwIwLxRmOxhA==}
     engines: {node: '>=12'}
@@ -930,6 +935,9 @@ packages:
   d3-hierarchy@3.1.2:
     resolution: {integrity: sha512-FX/9frcub54beBdugHjDCdikxThEqjnR93Qt7PvQTOHxyiNCAlvMrHhclk3cD5VeAaq9fxmfRp+CnWw9rEMBuA==}
     engines: {node: '>=12'}
+
+  d3-interpolate@1.4.0:
+    resolution: {integrity: sha512-V9znK0zc3jOPV4VD2zZn0sDhZU3WAE2bmlxdIwwQPPzPjvyLkd8B3JUVdS1IDUFDkWZ72c9qnv1GK2ZagTZ8EA==}
 
   d3-interpolate@3.0.1:
     resolution: {integrity: sha512-3bYs1rOD33uo8aqJfKP3JWPAibgw8Zm2+L9vBKEHJ2Rg+viTR7o5Mmv5mZcieN+FRYaAOWX5SJATX6k1PWz72g==}
@@ -1752,8 +1760,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sass@1.77.5:
-    resolution: {integrity: sha512-oDfX1mukIlxacPdQqNb6mV2tVCrnE+P3nVYioy72V5tlk56CPNcO4TCuFcaCRKKfJ1M3lH95CleRS+dVKL2qMg==}
+  sass@1.77.6:
+    resolution: {integrity: sha512-ByXE1oLD79GVq9Ht1PeHWCPMPB8XHpBuz1r85oByKHjZY6qV6rWnQovQzXJXuQ/XyE1Oj3iPk3lo28uzaRA2/Q==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2164,7 +2172,7 @@ snapshots:
     dependencies:
       '@antv/color-util': 2.0.6
       '@antv/dom-util': 2.0.4
-      '@antv/g-base': 0.5.16
+      '@antv/g-base': 0.5.11
       '@antv/matrix-util': 3.1.0-beta.3
       '@antv/path-util': 2.0.15
       '@antv/scale': 0.3.18
@@ -2184,7 +2192,7 @@ snapshots:
 
   '@antv/event-emitter@0.1.3': {}
 
-  '@antv/g-base@0.5.16':
+  '@antv/g-base@0.5.11':
     dependencies:
       '@antv/event-emitter': 0.1.3
       '@antv/g-math': 0.1.9
@@ -2193,14 +2201,14 @@ snapshots:
       '@antv/util': 2.0.17
       '@types/d3-timer': 2.0.3
       d3-ease: 1.0.7
-      d3-interpolate: 3.0.1
+      d3-interpolate: 1.4.0
       d3-timer: 1.0.10
       detect-browser: 5.3.0
       tslib: 2.6.3
 
   '@antv/g-canvas@0.5.17':
     dependencies:
-      '@antv/g-base': 0.5.16
+      '@antv/g-base': 0.5.11
       '@antv/g-math': 0.1.9
       '@antv/matrix-util': 3.1.0-beta.3
       '@antv/path-util': 2.0.15
@@ -2215,7 +2223,7 @@ snapshots:
 
   '@antv/g-svg@0.5.7':
     dependencies:
-      '@antv/g-base': 0.5.16
+      '@antv/g-base': 0.5.11
       '@antv/g-math': 0.1.9
       '@antv/util': 2.0.17
       detect-browser: 5.3.0
@@ -2230,7 +2238,7 @@ snapshots:
       '@antv/coord': 0.3.1
       '@antv/dom-util': 2.0.4
       '@antv/event-emitter': 0.1.3
-      '@antv/g-base': 0.5.16
+      '@antv/g-base': 0.5.11
       '@antv/g-canvas': 0.5.17
       '@antv/g-svg': 0.5.7
       '@antv/matrix-util': 3.1.0-beta.3
@@ -2243,10 +2251,10 @@ snapshots:
     dependencies:
       '@antv/color-util': 2.0.6
       '@antv/event-emitter': 0.1.3
-      '@antv/g-base': 0.5.16
+      '@antv/g-base': 0.5.11
       '@antv/g2': 4.2.11
       '@antv/matrix-util': 3.1.0-beta.3
-      '@antv/path-util': 3.0.1
+      '@antv/path-util': 2.0.15
       '@antv/scale': 0.3.18
       '@antv/util': 2.0.17
       d3-hierarchy: 2.0.0
@@ -2272,12 +2280,6 @@ snapshots:
     dependencies:
       '@antv/matrix-util': 3.0.4
       '@antv/util': 2.0.17
-      tslib: 2.6.3
-
-  '@antv/path-util@3.0.1':
-    dependencies:
-      gl-matrix: 3.4.3
-      lodash-es: 4.17.21
       tslib: 2.6.3
 
   '@antv/scale@0.3.18':
@@ -2564,9 +2566,9 @@ snapshots:
 
   '@types/web-bluetooth@0.0.20': {}
 
-  '@vitejs/plugin-vue@5.0.5(vite@5.3.1(sass@1.77.5))(vue@3.4.29)':
+  '@vitejs/plugin-vue@5.0.5(vite@5.3.1(sass@1.77.6))(vue@3.4.29)':
     dependencies:
-      vite: 5.3.1(sass@1.77.5)
+      vite: 5.3.1(sass@1.77.6)
       vue: 3.4.29
 
   '@vue/compiler-core@3.4.29':
@@ -2599,15 +2601,15 @@ snapshots:
       '@vue/compiler-dom': 3.4.29
       '@vue/shared': 3.4.29
 
-  '@vue/devtools-api@7.3.0(vue@3.4.29)':
+  '@vue/devtools-api@7.3.1(vue@3.4.29)':
     dependencies:
-      '@vue/devtools-kit': 7.3.0(vue@3.4.29)
+      '@vue/devtools-kit': 7.3.1(vue@3.4.29)
     transitivePeerDependencies:
       - vue
 
-  '@vue/devtools-kit@7.3.0(vue@3.4.29)':
+  '@vue/devtools-kit@7.3.1(vue@3.4.29)':
     dependencies:
-      '@vue/devtools-shared': 7.3.0
+      '@vue/devtools-shared': 7.3.1
       birpc: 0.2.17
       hookable: 5.5.3
       mitt: 3.0.1
@@ -2616,7 +2618,7 @@ snapshots:
       superjson: 2.2.1
       vue: 3.4.29
 
-  '@vue/devtools-shared@7.3.0':
+  '@vue/devtools-shared@7.3.1':
     dependencies:
       rfdc: 1.4.1
 
@@ -2911,6 +2913,8 @@ snapshots:
     dependencies:
       d3-path: 3.1.0
 
+  d3-color@1.4.1: {}
+
   d3-color@3.1.0: {}
 
   d3-contour@4.0.2:
@@ -2957,6 +2961,10 @@ snapshots:
   d3-hierarchy@2.0.0: {}
 
   d3-hierarchy@3.1.2: {}
+
+  d3-interpolate@1.4.0:
+    dependencies:
+      d3-color: 1.4.1
 
   d3-interpolate@3.0.1:
     dependencies:
@@ -4009,7 +4017,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass@1.77.5:
+  sass@1.77.6:
     dependencies:
       chokidar: 3.6.0
       immutable: 4.3.6
@@ -4209,14 +4217,14 @@ snapshots:
 
   valid-data-url@3.0.1: {}
 
-  vite@5.3.1(sass@1.77.5):
+  vite@5.3.1(sass@1.77.6):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.38
       rollup: 4.18.0
     optionalDependencies:
       fsevents: 2.3.3
-      sass: 1.77.5
+      sass: 1.77.6
 
   vitepress-markdown-timeline@1.2.1:
     dependencies:
@@ -4230,27 +4238,27 @@ snapshots:
 
   vitepress-plugin-google-analytics@1.0.2: {}
 
-  vitepress-plugin-mermaid@2.0.16(mermaid@10.9.1)(vitepress@1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.5)(search-insights@2.14.0)):
+  vitepress-plugin-mermaid@2.0.16(mermaid@10.9.1)(vitepress@1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.6)(search-insights@2.14.0)):
     dependencies:
       mermaid: 10.9.1
-      vitepress: 1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.5)(search-insights@2.14.0)
+      vitepress: 1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.6)(search-insights@2.14.0)
     optionalDependencies:
       '@mermaid-js/mermaid-mindmap': 9.3.0
 
-  vitepress-plugin-tabs@0.5.0(vitepress@1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.5)(search-insights@2.14.0))(vue@3.4.29):
+  vitepress-plugin-tabs@0.5.0(vitepress@1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.6)(search-insights@2.14.0))(vue@3.4.29):
     dependencies:
-      vitepress: 1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.5)(search-insights@2.14.0)
+      vitepress: 1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.6)(search-insights@2.14.0)
       vue: 3.4.29
 
-  vitepress@1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.5)(search-insights@2.14.0):
+  vitepress@1.2.3(@algolia/client-search@4.23.3)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.6)(search-insights@2.14.0):
     dependencies:
       '@docsearch/css': 3.6.0
       '@docsearch/js': 3.6.0(@algolia/client-search@4.23.3)(search-insights@2.14.0)
       '@shikijs/core': 1.7.0
       '@shikijs/transformers': 1.7.0
       '@types/markdown-it': 14.1.1
-      '@vitejs/plugin-vue': 5.0.5(vite@5.3.1(sass@1.77.5))(vue@3.4.29)
-      '@vue/devtools-api': 7.3.0(vue@3.4.29)
+      '@vitejs/plugin-vue': 5.0.5(vite@5.3.1(sass@1.77.6))(vue@3.4.29)
+      '@vue/devtools-api': 7.3.1(vue@3.4.29)
       '@vue/shared': 3.4.29
       '@vueuse/core': 10.11.0(vue@3.4.29)
       '@vueuse/integrations': 10.11.0(async-validator@4.2.5)(focus-trap@7.5.4)(vue@3.4.29)
@@ -4258,7 +4266,7 @@ snapshots:
       mark.js: 8.11.1
       minisearch: 6.3.0
       shiki: 1.7.0
-      vite: 5.3.1(sass@1.77.5)
+      vite: 5.3.1(sass@1.77.6)
       vue: 3.4.29
     optionalDependencies:
       markdown-it-mathjax3: 4.3.2
